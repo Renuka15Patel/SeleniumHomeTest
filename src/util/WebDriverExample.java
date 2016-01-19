@@ -32,7 +32,7 @@ public class WebDriverExample {
 	}
 	public static void sleep(long millisec){
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(millisec);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

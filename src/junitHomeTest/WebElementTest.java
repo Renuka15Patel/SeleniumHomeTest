@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import util.Constants;
 import util.WebDriverExample;
@@ -55,8 +56,12 @@ public class WebElementTest {
 			WebElement ele = (WebElement)iter.next();
 			ele.clear();
 		}
-		// WebElement monthElement = webDriver.findElement(By.id("month"));
-		// monthElement
+		WebElement ele = webDriver.findElement(By.name("manisha prajapati"));
+		System.out.println(ele.isEnabled());
+		Select sel = new Select(webDriver.findElement(By.name("year")));
+		sel.selectByValue("2016");
+		WebElement monthElement = webDriver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div/div/div/div[2]/div[2]/div/div/div/form/div[1]/div[5]/div[2]/span/span/select[1]"));
+		monthElement.sendKeys("");
 	}
 	
 	public void fillInputText(WebElement ele, String value){

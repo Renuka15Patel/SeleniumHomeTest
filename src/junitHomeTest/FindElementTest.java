@@ -1,5 +1,6 @@
 package junitHomeTest;
 
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -31,7 +32,10 @@ public class FindElementTest {
 		WebElement ele3 = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[1]/div/div/div/div[1]/div/div/div/div[1]/div[2]/div[1]/form[1]/input[1]"));
 		ele3.sendKeys("David");
 		
-		WebElement ele4 = driver.findElement(By.tagName("select"));
+		
+		
+		
+		
 	}
 
 }
